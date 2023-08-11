@@ -8,8 +8,9 @@ const ModalDescripcion = () => {
   return (
     <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
       <div className="w-full md:w-3/4 lg:w-1/2 xl:w-1/3 p-4 md:p-8 lg:p-10 bg-white rounded-lg shadow-xl relative">
+        {/*boton para cerrar el modal con un svg*/}
         <button
-          className="absolute top-2 right-2 text-gray-600 hover:text-gray-800"
+          className="absolute text-gray-600 hover:text-gray-800 top-2 right-2"
           onClick={cerrarModalDescripcion}
         >
           <svg
@@ -28,8 +29,8 @@ const ModalDescripcion = () => {
           </svg>
         </button>
 
-        {detalleTarea?.map((tarea, index) => (
-          <div key={index}>
+        {detalleTarea?.map((tarea) => (
+          <div key={tarea.id}>
             <div className="mb-4">
               <h2 className="font-normal text-rgb-82-97-122 text-2xl mb-5">
                 {tarea.tarea}

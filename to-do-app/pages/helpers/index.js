@@ -10,7 +10,7 @@ const prioridad = (prioridad) => {
 };
 
 function formatearFecha(fecha) {
-  const months = [
+  const meses = [
     "ene",
     "feb",
     "mar",
@@ -27,7 +27,7 @@ function formatearFecha(fecha) {
 
   const nuevaFecha = new Date(fecha);
   const dia = nuevaFecha.getDate();
-  const mes = months[nuevaFecha.getMonth()];
+  const mes = meses[nuevaFecha.getMonth()];
   const anho = nuevaFecha.getFullYear();
   const hora = nuevaFecha.getHours();
   const minuto = nuevaFecha.getMinutes();

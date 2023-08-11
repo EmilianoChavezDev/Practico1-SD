@@ -4,7 +4,7 @@ import useTodo from "../hooks/useTodo";
 import ModalCrear from "./ModalCrear";
 
 const Header = () => {
-  const { showDescripcionModal, showCrearModal, handleCrearModal } = useTodo();
+  const { showDescripcionModal, showCrearModal, handleCrearModal, isMover } = useTodo();
   return (
     <>
       <div className="mx-10">
@@ -24,7 +24,7 @@ const Header = () => {
           </div>
         </div>
       </div>
-      <div>{showDescripcionModal && <ModalDescripcion />}</div>
+      <div>{showDescripcionModal && !isMover && <ModalDescripcion />}</div>
       <div>{showCrearModal && <ModalCrear />}</div>
     </>
   );
